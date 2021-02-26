@@ -1,13 +1,16 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using _2K2SNP;
+using _2K2SNP.Commands;
 using _2K2SNP.Repositories;
-using User.Commands;
+using _2K2SNP.Units;
+using _2K2SNP.Menu;
 
 namespace User
 {
-    public class UserMenu
+    public class UserMenu : IMenu
     {
         private string pointer { get; set; }
         public int pPos { get; set; }
@@ -32,37 +35,51 @@ namespace User
 
         public void AddAuthor()
         {
-            Console.Clear(); Console.WriteLine("\tAdd new author");
-            Console.Write("First name : "); string fName = Console.ReadLine();
-            Console.Write("Middle name : "); string mName = Console.ReadLine();
-            Console.Write("Last name : "); string lName = Console.ReadLine();
-            Console.Write("Year of birth : "); int YOB = int.Parse(Console.ReadLine());
-            Console.Write("Year of death : "); int YOD = int.Parse(Console.ReadLine());
+            Console.Clear();
+            Console.WriteLine("\tAdd new author");
+            Console.Write("First name : ");
+            string fName = Console.ReadLine();
+            Console.Write("Middle name : ");
+            string mName = Console.ReadLine();
+            Console.Write("Last name : ");
+            string lName = Console.ReadLine();
+            Console.Write("Year of birth : ");
+            int YOB = int.Parse(Console.ReadLine());
+            Console.Write("Year of death : ");
+            int YOD = int.Parse(Console.ReadLine());
             authorRepository.Add(new Author(fName, mName, lName, YOB, YOD));
         }
 
         public void AddBook()
         {
-            Console.Clear(); Console.WriteLine("\tAdd new Book");
-            Console.Write("Author (pos): "); Author author = (Author)authorRepository[int.Parse(Console.ReadLine()) - 1];
-            Console.Write("Title : "); string title = Console.ReadLine();
-            Console.Write("Publication year : "); int pub_year = int.Parse(Console.ReadLine());
-            Console.Write("Pages : "); int pages = int.Parse(Console.ReadLine());
-            Console.Write("ISBN : "); string ISBN = Console.ReadLine();
+            Console.Clear();
+            Console.WriteLine("\tAdd new Book");
+            Console.Write("Author (pos): ");
+            Author author = (Author) authorRepository[int.Parse(Console.ReadLine()) - 1];
+            Console.Write("Title : ");
+            string title = Console.ReadLine();
+            Console.Write("Publication year : ");
+            int pub_year = int.Parse(Console.ReadLine());
+            Console.Write("Pages : ");
+            int pages = int.Parse(Console.ReadLine());
+            Console.Write("ISBN : ");
+            string ISBN = Console.ReadLine();
             bookRepository.Add(new Book(author, title, pub_year, pages, ISBN));
         }
 
         public void RemoveAuthor()
         {
             Console.Clear();
-            Console.Write("Author to remove (number) : "); int pos = int.Parse(Console.ReadLine());
+            Console.Write("Author to remove (number) : ");
+            int pos = int.Parse(Console.ReadLine());
             authorRepository.Remove(pos - 1);
         }
 
         public void RemoveBook()
         {
             Console.Clear();
-            Console.Write("Employee to remove (number) : "); int pos = int.Parse(Console.ReadLine());
+            Console.Write("Employee to remove (number) : ");
+            int pos = int.Parse(Console.ReadLine());
             bookRepository.Remove(pos - 1);
         }
 
@@ -144,6 +161,7 @@ namespace User
                                 exit = true;
                                 break;
                         }
+
                         break;
                 }
             }
@@ -333,12 +351,12 @@ namespace User
                         switch (pPos)
                         {
                             case 1:
-                                authorRepository.Show();
+                                Console.WriteLine(authorRepository);
 
                                 break;
 
                             case 2:
-                                bookRepository.Show();
+                                Console.WriteLine(bookRepository);
 
                                 break;
 
@@ -346,6 +364,7 @@ namespace User
                                 exit = true;
                                 break;
                         }
+
                         break;
                 }
             }
@@ -422,30 +441,48 @@ namespace User
                                 exit = true;
                                 break;
                         }
+
                         break;
                 }
             }
         }
 
-        private void ChangeTitle()
+        public void ChangeTitle()
         {
             Console.Clear();
             Console.Write("Enter title : ");
             title = Console.ReadLine();
         }
 
-        private void ChangeIndexation()
+        public void ChangeIndexation()
         {
             Console.Clear();
             Console.Write("Enter indexation type : ");
             list_ind = Console.ReadLine();
         }
 
-        private void ChangePointer()
+        public void ChangePointer()
         {
             Console.Clear();
             Console.Write("Enter pointer : ");
             pointer = Console.ReadLine();
+        }
+
+        //Empty realization
+        public void AddCustomer()
+        {
+        }
+
+        public void AddEmployee()
+        {
+        }
+
+        public void RemoveCustomer()
+        {
+        }
+
+        public void RemoveEmployee()
+        {
         }
     }
 }

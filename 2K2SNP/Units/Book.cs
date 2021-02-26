@@ -1,5 +1,4 @@
 ﻿using System;
-
 namespace _2K2SNP.Units
 {
     public class Book : Unit

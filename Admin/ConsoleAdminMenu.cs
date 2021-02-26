@@ -38,6 +38,11 @@ namespace Admin
             addBookCommand = new AddBookCommand(this);
             addCustomerCommand = new AddCustomerCommand(this);
             addEmployeeCommand = new AddEmployeeCommand(this);
+
+            removeAuthorCommand = new RemoveAuthorCommand(this);
+            removeBookCommand = new RemoveBookCommand(this);
+            removeCustomerCommand = new RemoveCustomerCommand(this);
+            removeEmployeeCommand = new RemoveEmployeeCommand(this);
         }
 
         public void AddAuthor()

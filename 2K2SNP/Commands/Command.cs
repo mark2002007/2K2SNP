@@ -4,10 +4,10 @@
     {
         public virtual void Execute()
         {
-            Funk();
+            Funс();
             CommandLogger.LogCommand(this);
         }
 
-        protected virtual void Funk() { }
+        protected virtual void Funс() { }
     };
 };

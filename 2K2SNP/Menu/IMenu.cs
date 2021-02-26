@@ -6,16 +6,14 @@ namespace _2K2SNP.Menu
 {
     public interface IMenu
     {
-        void AddAuthor();
-        void AddBook();
         void AddCustomer();
         void AddEmployee();
-
-        void RemoveAuthor();
-        void RemoveBook();
+        void AddAuthor();
+        void AddBook();
         void RemoveCustomer();
         void RemoveEmployee();
-
+        void RemoveAuthor();
+        void RemoveBook();
         void ShowMenu();
         void ShowAdd();
         void ShowRemove();

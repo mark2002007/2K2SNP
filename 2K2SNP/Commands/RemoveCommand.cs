@@ -8,7 +8,7 @@ namespace _2K2SNP.Commands {
 
         public RemoveAuthorCommand(IMenu receiver) => this.receiver = receiver;
 
-        protected override void Funk() => receiver.RemoveAuthor();
+        protected override void Funс() => receiver.RemoveAuthor();
     }
 
     public class RemoveBookCommand : Command
@@ -17,7 +17,7 @@ namespace _2K2SNP.Commands {
 
         public RemoveBookCommand(IMenu receiver) => this.receiver = receiver;
 
-        protected override void Funk() => receiver.RemoveBook();
+        protected override void Funс() => receiver.RemoveBook();
     }
 
     public class RemoveCustomerCommand : Command
@@ -26,7 +26,7 @@ namespace _2K2SNP.Commands {
 
         public RemoveCustomerCommand(IMenu receiver) => this.receiver = receiver;
 
-        protected override void Funk() => receiver.RemoveCustomer();
+        protected override void Funс() => receiver.RemoveCustomer();
     }
 
     public class RemoveEmployeeCommand : Command
@@ -35,6 +35,6 @@ namespace _2K2SNP.Commands {
 
         public RemoveEmployeeCommand(IMenu receiver) => this.receiver = receiver;
 
-        protected override void Funk() => receiver.RemoveEmployee();
+        protected override void Funс() => receiver.RemoveEmployee();
     }
 }

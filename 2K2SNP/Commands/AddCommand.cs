@@ -7,7 +7,7 @@ namespace _2K2SNP.Commands
 
         public AddAuthorCommand(IMenu receiver) => this.receiver = receiver;
 
-        protected override void Funk() => receiver.AddAuthor();
+        protected override void Funс() => receiver.AddAuthor();
     }
 
     public class AddBookCommand : Command
@@ -16,7 +16,7 @@ namespace _2K2SNP.Commands
 
         public AddBookCommand(IMenu receiver) => this.receiver = receiver;
 
-        protected override void Funk() => receiver.AddBook();
+        protected override void Funс() => receiver.AddBook();
     }
 
     public class AddCustomerCommand : Command
@@ -25,7 +25,7 @@ namespace _2K2SNP.Commands
 
         public AddCustomerCommand(IMenu receiver) => this.receiver = receiver;
 
-        protected override void Funk() => receiver.AddCustomer();
+        protected override void Funс() => receiver.AddCustomer();
     }
 
     public class AddEmployeeCommand : Command
@@ -34,6 +34,6 @@ namespace _2K2SNP.Commands
 
         public AddEmployeeCommand(IMenu receiver) => this.receiver = receiver;
 
-        protected override void Funk() => receiver.AddEmployee();
+        protected override void Funс() => receiver.AddEmployee();
     }
 }
