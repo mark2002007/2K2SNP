@@ -1,3 +1,0 @@
-﻿Cus,To,Mer,100,3
-Mer,Cus,To,200,2
-To,Mer,Cus,300,1

@@ -1,11 +1,12 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1" GroupingSetting="Access">
   <Class Name="_2K2SNP.Repositories.Repository">
-    <Position X="13.5" Y="5" Width="1.5" />
+    <Position X="16.25" Y="3.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAIAAAAAAIAAAAAECAAABAAAAAAAAAAAAAAQAAAAAAA=</HashCode>
+      <HashCode>AAIAAAAAAAAAAAAECAAABAAAAAAAAAAAAAAQAAAAAAA=</HashCode>
       <FileName>Repositories\Repository.cs</FileName>
     </TypeIdentifier>
+    <Lollipop Position="0.2" />
   </Class>
   <Class Name="_2K2SNP.Commands.AddAuthorCommand">
     <Position X="7" Y="4" Width="1.5" />
@@ -60,7 +61,7 @@
   <Class Name="_2K2SNP.Commands.CommandLogger">
     <Position X="10" Y="0.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAEAAAAAAAAAAAAAAAgCAAABAAAAAAAAAAAAEACAAA=</HashCode>
+      <HashCode>AAAEAAAAAAAAAAAEAAAACAAABAAAAAAAAAAAAEACAAA=</HashCode>
       <FileName>Commands\CommandLogger.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -148,10 +149,33 @@
       <FileName>Units\Customer.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Interface Name="_2K2SNP.Repositories.IRepository">
-    <Position X="13.5" Y="3.5" Width="1.5" />
+  <Class Name="_2K2SNP.Repositories.PersonTxtRepository">
+    <Position X="16.25" Y="8" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAIAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAQCAAAAAAgAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Repositories\TextRepositories\PersonTxtRepository.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="_2K2SNP.Factories.MemoryFactory" BaseTypeListCollapsed="true">
+    <Position X="18.5" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAACIAAAAAAEEAAAAAAAAAAAAAI=</HashCode>
+      <FileName>Factories\MemoryFactory.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="_2K2SNP.Factories.TxtFactory" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="18.5" Y="8.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAACIAAAAAAEEAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Factories\TxtFactory.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Interface Name="_2K2SNP.Repositories.IRepository">
+    <Position X="16.25" Y="6.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIAAAAAAAAAAAAACAAABAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Repositories\IRepository.cs</FileName>
     </TypeIdentifier>
   </Interface>
@@ -163,10 +187,17 @@
     </TypeIdentifier>
   </Interface>
   <Interface Name="_2K2SNP.Menu.IMenu">
-    <Position X="11.75" Y="3.5" Width="1.5" />
+    <Position X="12.75" Y="3.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAgEAAAACAAAAAISCAAAAAADIAAAAAABAMAAABAAA=</HashCode>
       <FileName>Menu\IMenu.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="_2K2SNP.Factories.IFactory">
+    <Position X="18.5" Y="6.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAACIAAAAAAEEAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Factories\IFactory.cs</FileName>
     </TypeIdentifier>
   </Interface>
   <Font Name="Segoe UI" Size="9" />

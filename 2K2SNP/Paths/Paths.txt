@@ -1,0 +1,4 @@
+﻿C:\Programs\MyPrograms\C#\2K2SNP\2K2SNP\Data\Authors.txt
+C:\Programs\MyPrograms\C#\2K2SNP\2K2SNP\Data\Customers.txt
+C:\Programs\MyPrograms\C#\2K2SNP\2K2SNP\Data\Employees.txt
+C:\Programs\MyPrograms\C#\2K2SNP\2K2SNP\Data\Books.txt

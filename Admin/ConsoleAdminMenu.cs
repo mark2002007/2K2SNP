@@ -2,7 +2,11 @@
 using _2K2SNP.Repositories;
 using _2K2SNP.Units;
 using System;
+using System.Diagnostics.CodeAnalysis;
+using System.Dynamic;
+using System.IO;
 using _2K2SNP.Commands;
+using _2K2SNP.Factories;
 
 namespace Admin
 {
@@ -23,17 +27,34 @@ namespace Admin
         private RemoveCustomerCommand removeCustomerCommand;
         private RemoveEmployeeCommand removeEmployeeCommand;
 
-        private Repository authorRepository = new Repository();
-        private Repository customerRepository = new Repository();
-        private Repository employeeRepository = new Repository();
-        private Repository bookRepository = new Repository();
+        private IFactory repFactory;
 
-        public ConsoleAdminMenu(string title = "", string list_ind = "", string pointer = "<")
+        private IRepository authorRepository;
+        private IRepository customerRepository;
+        private IRepository employeeRepository;
+        private IRepository bookRepository;
+        
+        public ConsoleAdminMenu(IFactory rep_type, string title = "Menu", string list_ind = "ORDERED", string pointer = "<")
         {
-            this.title = title;
+            this.title = title; 
             this.list_ind = list_ind;
             this.pointer = pointer;
+            repFactory = rep_type;
 
+            CreateRepositories();
+            CreateCommands();
+        }
+
+        private void CreateRepositories()
+        {
+            authorRepository = repFactory.createAuthorRepository();
+            bookRepository = repFactory.createBookRepository(authorRepository);
+            customerRepository = repFactory.createCustomerRepository();
+            employeeRepository = repFactory.createEmployeeRepository();
+        }
+
+        private void CreateCommands()
+        {
             addAuthorCommand = new AddAuthorCommand(this);
             addBookCommand = new AddBookCommand(this);
             addCustomerCommand = new AddCustomerCommand(this);
@@ -444,29 +465,23 @@ namespace Admin
                         {
                             case 1:
                                 Console.WriteLine(authorRepository);
-
                                 break;
 
                             case 2:
                                 Console.WriteLine(bookRepository);
-
                                 break;
 
                             case 3:
                                 Console.WriteLine(customerRepository);
-
                                 break;
 
                             case 4:
                                 Console.WriteLine(employeeRepository);
-
                                 break;
 
                             case 5:
-                                CommandLogger.ShowLog();
-
+                                Console.WriteLine(CommandLogger.ToString());
                                 break;
-
                             case 6:
                                 exit = true;
                                 break;

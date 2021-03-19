@@ -1,29 +1,20 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Threading;
 using _2K2SNP.Units;
 
 namespace _2K2SNP.Repositories
 {
-    public class Repository
+    public class Repository : IRepository
     {
+        
         public List<Unit> data { get; protected set; }
-        public bool sync { get; protected set; }
 
-        public Repository(bool sync = false)
-        {
-            data = new List<Unit>();
-            this.sync = sync;
-        }
+        public Repository() => data = new List<Unit>();
 
-        public void Add(Unit elem)
-        {
-            data.Add(elem);
-        }
+        public virtual void Add(Unit elem) => data.Add(elem);
 
-        public void Remove(int ind)
-        {
-            data.RemoveAt(ind);
-        }
+        public virtual void Remove(int ind) => data.RemoveAt(ind);
 
         public override string ToString()
         {
