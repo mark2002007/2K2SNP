@@ -486,7 +486,7 @@ namespace Admin
                                 exit = true;
                                 break;
                         }
-                        if (exit != true) Console.ReadKey();
+                        Console.ReadKey();
                         break;
                 }
             }

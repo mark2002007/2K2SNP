@@ -12,7 +12,7 @@ namespace Admin
 
         static AppConfigurator()
         {
-            switch (System.Configuration.ConfigurationManager.AppSettings["factory_type"])
+            switch (ConfigurationManager.AppSettings["factory_type"])
             {
                 case "txt":
                     factory = new TxtFactory();
@@ -30,7 +30,7 @@ namespace Admin
 
         private static void Main(string[] args)
         {
-            ConsoleAdminMenu menu = new ConsoleAdminMenu(AppConfigurator.getFactory());
+            ConsoleAdminMenu menu = new ConsoleAdminMenu(AppConfigurator.getFactory(), title : "AdminMenu");
             menu.ShowMenu();
         }
     }
