@@ -10,15 +10,16 @@ using _2K2SNP.Units;
 
 namespace _2K2SNP.Repositories
 {
-    public class CustomerTxtRepository : PersonTxtRepository
+    public class CustomerTxtRepository : TxtRepository
     {
-        public CustomerTxtRepository(string src) : base(src) { }
-        protected override Unit CreateSpecialUnit(List<string> paramsList) => new Customer(
-            paramsList[0],
-            paramsList[1],
-            paramsList[2],
-            int.Parse(paramsList[3]),
-            int.Parse(paramsList[4])
-        );
+        public CustomerTxtRepository(string src) : base(src) => ReadFromFile();
+        protected override Unit CreateSpecialUnit(string[] paramsList) =>
+            new Customer(
+                paramsList[0],
+                paramsList[1],
+                paramsList[2],
+                int.Parse(paramsList[3]),
+                int.Parse(paramsList[4])
+            );
     }
 }

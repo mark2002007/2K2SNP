@@ -14,9 +14,8 @@ namespace _2K2SNP.Units
             this.purchases = purchases;
         }
 
-        public override string ToString()
-        {
-            return base.ToString() + '\n' + $"Balance : {balance}\nPurchases : {purchases}";
-        }
+        public override string ToString() => base.ToString() + '\n' + $"Balance : {balance}\nPurchases : {purchases}";
+
+        public override string ToCSV() => $"{base.ToCSV()},{balance},{purchases}";
     }
 }

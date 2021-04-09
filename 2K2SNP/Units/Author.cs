@@ -14,9 +14,8 @@ namespace _2K2SNP.Units
             this.yod = yod;
         }
 
-        public override string ToString()
-        {
-            return $"{base.ToString()}\nYear of Birth : {yob}\nYear of Death : {yod}";
-        }
+        public override string ToString() => $"{base.ToString()}\nYear of Birth : {yob}\nYear of Death : {yod}";
+
+        public override string ToCSV() => $"{base.ToCSV()},{yob},{yod}";
     }
 }

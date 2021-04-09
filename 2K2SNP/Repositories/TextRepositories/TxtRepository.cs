@@ -21,6 +21,14 @@ namespace _2K2SNP.Repositories
             this.sync = sync;
         }
 
+        public override List<Unit> GetData()
+        {
+            ReadFromFile();
+            return base.GetData();
+        }
+
+        public override void Refresh() => ReadFromFile();
+
         public override void Add(Unit elem)
         {
             data.Add(elem);
@@ -34,9 +42,29 @@ namespace _2K2SNP.Repositories
             if (sync)
                 Sync();
         }
-        
-        protected abstract void Sync();
 
-        protected abstract void ReadFromFile();
+        protected void Sync() => File.WriteAllLines(src, data.Select(x => x.ToCSV()).ToArray());
+
+        public void ReadFromFile()
+        {
+            data = new List<Unit>();
+            string line = string.Empty;
+            bool is_sync = sync;
+            using (StreamReader file = new StreamReader(src))
+            {
+                sync = false;
+                while (true)
+                {
+                    line = file.ReadLine();
+                    if (!string.IsNullOrEmpty(line))
+                        Add(CreateSpecialUnit(line.Split(",")));
+                    else
+                        break;
+                }
+                sync = is_sync;
+            }
+        }
+
+        protected abstract Unit CreateSpecialUnit(string[] paramsList);
     }
 }

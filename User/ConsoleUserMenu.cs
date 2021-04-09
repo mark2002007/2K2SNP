@@ -8,7 +8,7 @@ using System.IO;
 using _2K2SNP.Commands;
 using _2K2SNP.Factories;
 
-namespace User
+namespace ConsoleUser
 {
     public class ConsoleUserMenu : IMenu
     {

@@ -7,6 +7,8 @@ namespace _2K2SNP.Repositories
 {
     public interface IRepository
     {
+        void Refresh();
+        List<Unit> GetData();
         void Add(Unit elem);
         void Remove(int ind);
         public Unit this[int index] { get; set; }

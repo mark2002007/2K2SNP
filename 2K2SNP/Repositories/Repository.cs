@@ -7,15 +7,16 @@ namespace _2K2SNP.Repositories
 {
     public class Repository : IRepository
     {
-        
         public List<Unit> data { get; protected set; }
 
         public Repository() => data = new List<Unit>();
 
+        public virtual List<Unit> GetData() => data;
+
         public virtual void Add(Unit elem) => data.Add(elem);
 
         public virtual void Remove(int ind) => data.RemoveAt(ind);
-
+        public virtual void Refresh() {}
         public override string ToString()
         {
             string str = string.Empty;
@@ -29,5 +30,7 @@ namespace _2K2SNP.Repositories
             get => data[index];
             set => data[index] = value;
         }
+
+
     }
 }

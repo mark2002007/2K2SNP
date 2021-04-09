@@ -15,9 +15,8 @@ namespace _2K2SNP.Units
             this.lName = lName;
         }
 
-        public override string ToString()
-        {
-            return $"First Name : {fName}\nMiddle Name : {mName}\nLast Name : {lName}";
-        }
+        public override string ToString() => $"First Name : {fName}\nMiddle Name : {mName}\nLast Name : {lName}";
+
+        public override string ToCSV() => $"{fName},{mName},{lName}";
     }
 }

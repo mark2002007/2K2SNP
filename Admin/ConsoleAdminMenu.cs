@@ -8,7 +8,7 @@ using System.IO;
 using _2K2SNP.Commands;
 using _2K2SNP.Factories;
 
-namespace Admin
+namespace ConsoleAdmin
 {
     public class ConsoleAdminMenu : IMenu
     {
@@ -134,7 +134,7 @@ namespace Admin
         public void RemoveBook()
         {
             Console.Clear();
-            Console.Write("Employee to remove (number) : "); int pos = int.Parse(Console.ReadLine());
+            Console.Write("Book to remove (number) : "); int pos = int.Parse(Console.ReadLine());
             bookRepository.Remove(pos - 1);
         }
 
@@ -464,18 +464,22 @@ namespace Admin
                         switch (pPos)
                         {
                             case 1:
+                                authorRepository.Refresh();
                                 Console.WriteLine(authorRepository);
                                 break;
 
                             case 2:
+                                bookRepository.Refresh();
                                 Console.WriteLine(bookRepository);
                                 break;
 
                             case 3:
+                                customerRepository.Refresh();
                                 Console.WriteLine(customerRepository);
                                 break;
 
                             case 4:
+                                employeeRepository.Refresh();
                                 Console.WriteLine(employeeRepository);
                                 break;
 
@@ -486,7 +490,7 @@ namespace Admin
                                 exit = true;
                                 break;
                         }
-                        Console.ReadKey();
+                        if(!exit)Console.ReadKey();
                         break;
                 }
             }

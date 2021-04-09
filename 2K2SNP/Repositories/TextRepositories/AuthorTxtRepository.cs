@@ -10,25 +10,27 @@ using _2K2SNP.Units;
 
 namespace _2K2SNP.Repositories
 {
-    public class AuthorTxtRepository : PersonTxtRepository
+    public class AuthorTxtRepository : TxtRepository
     {
-        public AuthorTxtRepository(string src) : base(src) {}
-        public int IndexByFullName(Person u)
+        public AuthorTxtRepository(string src) : base(src) => ReadFromFile();
+
+        public Author GetAuthorByFullName(string fName, string mName, string lName)
         {
             for (int i = 0; i < data.Count; i++)
-                if (((Person)data[i]).fName == u.fName &&
-                    ((Person)data[i]).mName == u.mName &&
-                    ((Person)data[i]).lName == u.lName
-                )
-                    return i;
-            return -1;
+                if (((Person)data[i]).fName == fName &&
+                    ((Person)data[i]).mName == mName &&
+                    ((Person)data[i]).lName == lName)
+                    return (Author)data[i];
+            return null;
         }
-        protected override Unit CreateSpecialUnit(List<string> paramsList) => new Author(
-            paramsList[0],
-            paramsList[1],
-            paramsList[2],
-            int.Parse(paramsList[3]),
-            int.Parse(paramsList[4])
-        );
+
+        protected override Unit CreateSpecialUnit(string[] paramsList) =>
+            new Author(
+                paramsList[0],
+                paramsList[1],
+                paramsList[2],
+                int.Parse(paramsList[3]),
+                int.Parse(paramsList[4])
+            );
     }
 }

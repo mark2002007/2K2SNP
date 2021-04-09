@@ -117,43 +117,36 @@
   <Class Name="_2K2SNP.Units.Book">
     <Position X="13.75" Y="7.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAABAQSAAAAAEAAAAAIAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAABAQSAAAAAEAAAAAIBAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Units\Book.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="_2K2SNP.Units.Employee">
     <Position X="15.75" Y="10.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAQAgAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAQAgAAAEAAAAAABAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Units\Employee.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="_2K2SNP.Units.Person">
     <Position X="15.75" Y="7.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAEAAAQAAAAAAAABAAAAAgAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAEAAAQAABAAAAABAAAAAgAAAAAAAA=</HashCode>
       <FileName>Units\Person.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="_2K2SNP.Units.Unit">
     <Position X="14.75" Y="6.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Units\Unit.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="_2K2SNP.Units.Customer">
     <Position X="17.75" Y="10.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAEAAAAAAAEAAAAAAAIAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAEAAAAAAAEAAAAAABIAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Units\Customer.cs</FileName>
-    </TypeIdentifier>
-  </Class>
-  <Class Name="_2K2SNP.Repositories.PersonTxtRepository">
-    <Position X="23.75" Y="12.75" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAQCAAAAAAgAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>Repositories\TextRepositories\PersonTxtRepository.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="_2K2SNP.Factories.MemoryFactory" BaseTypeListCollapsed="true">
@@ -196,14 +189,14 @@
   <Class Name="_2K2SNP.Repositories.TxtRepository">
     <Position X="23.75" Y="9.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAIAAAAAAIAAAQCAAEAABAAAAAAAAgAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAIAAAAAAIAAAQCAAEAABgAAAAAAAgAAAAAAAAAAAAA=</HashCode>
       <FileName>Repositories\TextRepositories\TxtRepository.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="_2K2SNP.Repositories.TextRepositories.BookTxtRepository">
     <Position X="22" Y="9.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAQAAAAAAAAQCAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAQAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Repositories\TextRepositories\BookTxtRepository.cs</FileName>
     </TypeIdentifier>
   </Class>

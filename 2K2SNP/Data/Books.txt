@@ -1,7 +1,2 @@
-1
-Author : 1
-Title : 1
-Publication Year : 1
-Number of Pages : 1
-ISBN : 1
-
+A,B,C,1,1,1,1
+C,B,A,2,2,2,2

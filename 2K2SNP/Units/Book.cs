@@ -21,9 +21,9 @@ namespace _2K2SNP.Units
             this.ISBN = ISBN;
         }
 
-        public override string ToString()
-        {
-            return $"Author : {author.fName} {author.mName} {author.lName}\nTitle : {title}\nPublication Year : {pub_year}\nNumber of Pages : {pages}\nISBN : {ISBN}";
-        }
+        public override string ToString() => 
+            $"Author : {author.fName} {author.mName} {author.lName}\nTitle : {title}\nPublication Year : {pub_year}\nNumber of Pages : {pages}\nISBN : {ISBN}";
+
+        public override string ToCSV() => $"{author.fName},{author.mName},{author.lName},{title},{pub_year},{pages},{ISBN}";
     }
 }

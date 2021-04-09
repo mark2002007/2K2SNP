@@ -14,9 +14,8 @@ namespace _2K2SNP.Units
             this.rank = rank;
         }
 
-        public override string ToString()
-        {
-            return base.ToString() + '\n' + $"Salary : {salary}\nRank : {rank}";
-        }
+        public override string ToString() => base.ToString() + '\n' + $"Salary : {salary}\nRank : {rank}";
+
+        public override string ToCSV() => $"{base.ToCSV()},{salary},{rank}";
     }
 }

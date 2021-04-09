@@ -18,52 +18,13 @@ namespace _2K2SNP.Repositories.TextRepositories
             ReadFromFile();
         }
 
-        protected override void Sync()
-        {
-            string[] sarr = ToString().Split("\n");
-                for (int i = 0; i < sarr.Length; i++)
-                {
-                    string[] sub_sarr = sarr[i].Split(" ");
-                    if (sub_sarr.First() == "Author")
-                    {
-                        Person tauth = new Author(sub_sarr[sub_sarr.Length - 3], sub_sarr[sub_sarr.Length - 2], sub_sarr[sub_sarr.Length - 1]);
-                        int auth_num = related_rep.IndexByFullName(tauth);
-                        sarr[i] = "Author : " + (auth_num + 1);
-                    }
-                }
-                File.WriteAllLines(src, sarr);
-        }
-
-        protected override void ReadFromFile()
-        {
-            string line = string.Empty;
-            bool is_sync = sync;
-
-
-            using (StreamReader file = new StreamReader(src))
-            {
-                sync = false;
-                while (true)
-                {
-                    //Collect parameters
-                    List<string> paramsList = new List<string>();
-                    for (int i = 0; i < param_amount; i++)
-                        if (!string.IsNullOrEmpty(line = file.ReadLine()))
-                            paramsList.Add(line.Split(" ").Last());
-                        else break;
-                    if (string.IsNullOrEmpty(line))
-                        break;
-
-                    Add(new Book(
-                        (Author) related_rep.data[int.Parse(paramsList[0]) - 1],
-                        paramsList[1],
-                        int.Parse(paramsList[2]),
-                        int.Parse(paramsList[3]),
-                        paramsList[4]
-                    ));
-                }
-                sync = is_sync;
-            }
-        }
+        protected override Unit CreateSpecialUnit(string[] paramsList) =>
+            new Book(
+                related_rep.GetAuthorByFullName(paramsList[0],paramsList[1],paramsList[2]),
+                paramsList[3],
+                int.Parse(paramsList[4]),
+                int.Parse(paramsList[5]),
+                paramsList[6]
+            );
     }
 }

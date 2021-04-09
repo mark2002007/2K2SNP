@@ -1,5 +1,2 @@
-First Name : A
-Middle Name : B
-Last Name : C
-Year of Birth : 1
-Year of Death : 1
+A,B,C,1990,0
+C,B,A,1990,0
