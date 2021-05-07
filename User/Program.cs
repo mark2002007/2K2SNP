@@ -10,7 +10,7 @@ namespace ConsoleUser
         static void Main(string[] args)
         {
             ConsoleUserMenu menu = new ConsoleUserMenu(AppConfigurator.getFactory(), title: "UserMenu");
-            menu.ShowMenu();
+            menu.CallMenu();
         }
     }
 }

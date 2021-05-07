@@ -6,11 +6,11 @@ using Tools;
 namespace ConsoleAdmin
 {
     internal class Program
-    {
+    {   
         private static void Main(string[] args)
         {
             ConsoleAdminMenu menu = new ConsoleAdminMenu(AppConfigurator.getFactory(), title: "AdminMenu");
-            menu.ShowMenu();
+            menu.CallMenu();
         }
     }
 }

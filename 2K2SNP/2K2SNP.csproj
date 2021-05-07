@@ -8,12 +8,15 @@
 
   <ItemGroup>
     <Compile Remove="Configs\**" />
+    <Compile Remove="Factories\NewFolder\**" />
     <EmbeddedResource Remove="Configs\**" />
+    <EmbeddedResource Remove="Factories\NewFolder\**" />
     <None Remove="Configs\**" />
+    <None Remove="Factories\NewFolder\**" />
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Factories\NewFolder\" />
+    <Folder Include="Menu\" />
   </ItemGroup>
 
 </Project>

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Runtime.Remoting;
 using System.Threading;
 using _2K2SNP.Units;
 
@@ -13,9 +14,17 @@ namespace _2K2SNP.Repositories
 
         public virtual List<Unit> GetData() => data;
 
-        public virtual void Add(Unit elem) => data.Add(elem);
+        public virtual void Add(Unit elem) 
+        {
+            if(elem != null)
+                data.Add(elem);
+        }
 
-        public virtual void Remove(int ind) => data.RemoveAt(ind);
+        public virtual void Remove(int ind)
+        {
+            if(ind < data.Count)
+                data.RemoveAt(ind < 0? data.Count + ind : ind);
+        }
         public virtual void Refresh() {}
         public override string ToString()
         {

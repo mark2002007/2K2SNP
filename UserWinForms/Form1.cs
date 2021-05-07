@@ -111,7 +111,7 @@ namespace UserWinForms
                         break;
                 }
             }
-            catch (Exception exception)
+            catch
             {
                 MessageBox.Show("Wrong Data", "Error!", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
@@ -133,7 +133,7 @@ namespace UserWinForms
                         break;
                 }
             }
-            catch (Exception exception)
+            catch
             {
                 MessageBox.Show("Wrong ID", "Error!", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
@@ -150,6 +150,38 @@ namespace UserWinForms
                 case 1:
                     RefreshBookGrid();
                     break;
+            }
+        }
+
+        private void Authors_dataGrid_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Delete)
+            {
+                try
+                {
+                    authorRepository.Remove(Authors_dataGrid.SelectedRows[0].Index);
+                    RefreshAuthorGrid();
+                }
+                catch
+                {
+                    MessageBox.Show("No row selected!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+        }
+
+        private void Books_dataGrid_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Delete)
+            {
+                try
+                {
+                    bookRepository.Remove(Books_dataGrid.SelectedRows[0].Index);
+                    RefreshBookGrid();
+                }
+                catch
+                {
+                    MessageBox.Show("No row selected!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
         }
     }

@@ -16,7 +16,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tools", "Tools\Tools.csproj", "{FFB41816-5BB1-4B94-97E5-5FFE4C39D355}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UserWinForms", "UserWinForms\UserWinForms.csproj", "{2C5B9114-6BF9-4034-80E4-48792E8FCBED}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UserWinForms", "UserWinForms\UserWinForms.csproj", "{2C5B9114-6BF9-4034-80E4-48792E8FCBED}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SolutionTests", "SolutionTests\SolutionTests.csproj", "{30B7AC16-44ED-497F-9E14-030FBE96F8CB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -44,6 +46,10 @@ Global
 		{2C5B9114-6BF9-4034-80E4-48792E8FCBED}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2C5B9114-6BF9-4034-80E4-48792E8FCBED}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2C5B9114-6BF9-4034-80E4-48792E8FCBED}.Release|Any CPU.Build.0 = Release|Any CPU
+		{30B7AC16-44ED-497F-9E14-030FBE96F8CB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{30B7AC16-44ED-497F-9E14-030FBE96F8CB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{30B7AC16-44ED-497F-9E14-030FBE96F8CB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{30B7AC16-44ED-497F-9E14-030FBE96F8CB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

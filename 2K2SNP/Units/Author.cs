@@ -11,7 +11,7 @@ namespace _2K2SNP.Units
             : base(fName, mName, lName)
         {
             this.yob = yob;
-            this.yod = yod;
+            this.yod = yod < yob ? 0 : yod;
         }
 
         public override string ToString() => $"{base.ToString()}\nYear of Birth : {yob}\nYear of Death : {yod}";

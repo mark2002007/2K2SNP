@@ -95,11 +95,14 @@ namespace UserWinForms
             this.Authors_dataGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.Authors_dataGrid.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Authors_dataGrid.Location = new System.Drawing.Point(3, 3);
+            this.Authors_dataGrid.MultiSelect = false;
             this.Authors_dataGrid.Name = "Authors_dataGrid";
             this.Authors_dataGrid.RowHeadersWidth = 62;
             this.Authors_dataGrid.RowTemplate.Height = 33;
+            this.Authors_dataGrid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.Authors_dataGrid.Size = new System.Drawing.Size(1004, 599);
             this.Authors_dataGrid.TabIndex = 2;
+            this.Authors_dataGrid.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Authors_dataGrid_KeyDown);
             // 
             // Books_tab
             // 
@@ -122,11 +125,14 @@ namespace UserWinForms
             this.Books_dataGrid.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Books_dataGrid.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(40)))), ((int)(((byte)(49)))));
             this.Books_dataGrid.Location = new System.Drawing.Point(3, 3);
+            this.Books_dataGrid.MultiSelect = false;
             this.Books_dataGrid.Name = "Books_dataGrid";
             this.Books_dataGrid.RowHeadersWidth = 62;
             this.Books_dataGrid.RowTemplate.Height = 33;
+            this.Books_dataGrid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.Books_dataGrid.Size = new System.Drawing.Size(1004, 599);
             this.Books_dataGrid.TabIndex = 0;
+            this.Books_dataGrid.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Books_dataGrid_KeyDown);
             // 
             // label1
             // 

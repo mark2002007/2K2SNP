@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Linq;
+
 namespace _2K2SNP.Units
 {
     public class Book : Unit
@@ -13,17 +15,16 @@ namespace _2K2SNP.Units
         {
             this.title = title;
             this.author = author;
-            //if (pub_year > 2021) throw new Exception("PubYear_ERROR");
             this.pub_year = pub_year;
-            //if (pages < 0) throw new Exception("PagesCount_ERROR");
-            this.pages = pages;
-            //if (ISBN.Length != 13) throw new Exception("ISBN_ERROR");
-            this.ISBN = ISBN;
+            this.pages = pages < 0 ? 0 : pages;
+            this.ISBN = (ISBN??="0").Length <= 13? 
+                ISBN + new string('0', 13 - ISBN.Length) : 
+                string.Join("",ISBN.Take(13));
         }
 
         public override string ToString() => 
-            $"Author : {author.fName} {author.mName} {author.lName}\nTitle : {title}\nPublication Year : {pub_year}\nNumber of Pages : {pages}\nISBN : {ISBN}";
+            $"Author : {author?.fName} {author?.mName} {author?.lName}\nTitle : {title}\nPublication Year : {pub_year}\nNumber of Pages : {pages}\nISBN : {ISBN}";
 
-        public override string ToCSV() => $"{author.fName},{author.mName},{author.lName},{title},{pub_year},{pages},{ISBN}";
+        public override string ToCSV() => $"{author?.fName},{author?.mName},{author?.lName},{title},{pub_year},{pages},{ISBN}";
     }
 }
